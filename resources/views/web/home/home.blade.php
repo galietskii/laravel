@@ -1,4 +1,4 @@
-@extends('web.layout')
+@extends('web._layouts.layout')
 
 @section('banner')
     <!-- banner -->
