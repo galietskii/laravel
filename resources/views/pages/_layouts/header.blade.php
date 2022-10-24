@@ -3,7 +3,7 @@
     <nav class="cl-effect-13" id="cl-effect-13">
         <ul class="nav navbar-nav">
             <li><a href="{{ route('home') }}" @if(Route::is('home'))class="active"@endif>Home</a></li>
-            <li><a href="{{ route('news.index') }}" @if(Route::is('news'))class="active"@endif>News & Events</a></li>
+            <li><a href="{{ route('news.index') }}" @if(Route::is('news.*'))class="active"@endif>News & Events</a></li>
             <li role="presentation" class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     Services <span class="caret"></span>

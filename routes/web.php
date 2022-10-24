@@ -18,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[IndexController::class, 'home'])->name('home');
 Route::get('/mail',[IndexController::class, 'mail'])->name('mail');
 Route::resource('news',NewsController::class);
+Route::resource('service', ServicesController::class);
