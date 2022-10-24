@@ -13,6 +13,7 @@ class ServicesController extends Controller
      */
     public function index()
     {
+
         $service = [
             [
                 'img' => 'images/1.png',

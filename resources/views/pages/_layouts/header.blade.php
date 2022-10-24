@@ -9,8 +9,8 @@
                     Services <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="services.html">Door Delivery</a></li>
-                    <li><a href="services.html">Direct Delivery</a></li>
+                    <li><a href="{{ route('services.index') }}">Door Delivery</a></li>
+                    <li><a href="{{ route('services.index') }}">Direct Delivery</a></li>
                 </ul>
             </li>
             <li><a href="{{ route('mail') }}" @if(Route::is('mail'))class="active"@endif>Mail Us</a></li>
