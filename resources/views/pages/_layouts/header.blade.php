@@ -5,11 +5,11 @@
             <li><a href="{{ route('home') }}" @if(Route::is('home'))class="active"@endif>Home</a></li>
             <li><a href="{{ route('news.index') }}" @if(Route::is('news.*'))class="active"@endif>News & Events</a></li>
             <li role="presentation" class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" @if(Route::is('services.*')) class="active"@endif>
                     Services <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="{{ route('services.index') }}">Door Delivery</a></li>
+                    <li><a href="{{ route('services.index') }}" @if(Route::is('services.*')) class="active"@endif>Door Delivery</a></li>
                     <li><a href="{{ route('services.index') }}">Direct Delivery</a></li>
                 </ul>
             </li>
