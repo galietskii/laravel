@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         <div class="service-grd-pos2">
-                            <p>{{ $service['price']cd  }}</p>
+                            <p>{{ $service['price'] }}</p>
                         </div>
                     </div>
                 </div>
