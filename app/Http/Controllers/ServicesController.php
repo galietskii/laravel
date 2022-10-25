@@ -31,7 +31,26 @@ class ServicesController extends Controller
                 'price' => '$13 /-',
             ]
         ];
-        return view('pages.services.index',compact('services'));
+        $grids = [
+            [
+                'title' => 'necessitatibus saepe',
+                'content' => 'Aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
+                            voluptates repudiandae',
+            ],
+            [
+                'title' => 'necessitatibus saepe',
+                'content' => 'Aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
+                            voluptates repudiandae',
+            ],
+            [
+                'title' => 'necessitatibus saepe',
+                'content' => 'Aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
+                            voluptates repudiandae',
+            ]
+        ];
+        return view('pages.services.index',compact('services', 'grids'));
+
+
     }
 
     /**

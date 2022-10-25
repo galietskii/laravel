@@ -56,39 +56,18 @@
             </div>
             <div class="services-grids">
                 <h2 class="animated fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">Offered Services</h2>
+                @foreach($grids as $grid)
                 <div class="col-md-4 services-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <div class="col-xs-2 services-grid-left">
                         <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
                     </div>
                     <div class="col-xs-10 services-grid-right">
-                        <h4>necessitatibus saepe</h4>
-                        <p>Aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
-                            voluptates repudiandae</p>
+                        <h4>{{ $grid['title'] }}</h4>
+                        <p>{!! $grid['content'] !!}}</p>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
-                <div class="col-md-4 services-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-                    <div class="col-xs-2 services-grid-left">
-                        <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
-                    </div>
-                    <div class="col-xs-10 services-grid-right">
-                        <h4>necessitatibus saepe</h4>
-                        <p>Aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
-                            voluptates repudiandae</p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="col-md-4 services-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-                    <div class="col-xs-2 services-grid-left">
-                        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-                    </div>
-                    <div class="col-xs-10 services-grid-right">
-                        <h4>necessitatibus saepe</h4>
-                        <p>Aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
-                            voluptates repudiandae</p>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
+                @endforeach
                 <div class="clearfix"> </div>
             </div>
             <div class="sevices-list-grids">
