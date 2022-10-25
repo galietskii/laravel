@@ -14,7 +14,7 @@ class ServicesController extends Controller
     public function index()
     {
 
-        $service = [
+        $services = [
             [
                 'img' => 'images/1.png',
                 'title' => 'eum fugiat quo nulla',
@@ -31,7 +31,7 @@ class ServicesController extends Controller
                 'price' => '$13 /-',
             ]
         ];
-        return view('pages.services.index',compact('service'));
+        return view('pages.services.index',compact('services'));
     }
 
     /**

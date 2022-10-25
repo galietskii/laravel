@@ -21,13 +21,13 @@
                     <div class="service-grd wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
                         <img src="{{ asset($service['img']) }}" alt=" " class="img-responsive" />
                         <div class="service-grd-pos">
-                            <h4>{{ asset($service['title']) }}</h4>
+                            <h4>{{ $service['title'] }}</h4>
                             <div class="more m2">
                                 <a href="single.html" class="hvr-curl-bottom-right">Read More</a>
                             </div>
                         </div>
                         <div class="service-grd-pos2">
-                            <p>{{ asset($service['price']) }}</p>
+                            <p>{{ $service['price']cd  }}</p>
                         </div>
                     </div>
                 </div>
@@ -41,13 +41,13 @@
                         <div class="service-grd wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
                             <img src="{{ asset($service['img']) }}" alt=" " class="img-responsive" />
                             <div class="service-grd-pos">
-                                <h4>{{ asset($service['title']) }}</h4>
+                                <h4>{{ $service['title'] }}</h4>
                                 <div class="more m2">
                                     <a href="single.html" class="hvr-curl-bottom-right">Read More</a>
                                 </div>
                             </div>
                             <div class="service-grd-pos2">
-                                <p>{{ asset($service['price']) }}</p>
+                                <p>{{ $service['price'] }}</p>
                             </div>
                         </div>
                     </div>
