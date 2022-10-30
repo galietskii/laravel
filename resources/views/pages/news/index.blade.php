@@ -23,7 +23,7 @@
                         </div>
                         {!! $event['text'] !!}
                         <div class="more">
-                            <a href="single.html" class="hvr-curl-bottom-right">Read More</a>
+                            <a href="{{url('shownews/'.'$event->id')}}" class="hvr-curl-bottom-right">Read More</a>
                         </div>
                     </div>
                 @endforeach

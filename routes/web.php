@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\IndexController;
-use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ServicesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[IndexController::class, 'home'])->name('home');
 Route::get('/mail',[IndexController::class, 'mail'])->name('mail');
-Route::resource('news',NewsController::class);
-Route::resource('services', \App\Http\Controllers\ServicesController::class);
+Route::resource('events',EventController::class);
+Route::resource('services', ServicesController::class);
