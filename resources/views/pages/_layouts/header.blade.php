@@ -17,7 +17,7 @@
         </ul>
     </nav>
     <div class="social-icons">
-        <ul>cd 
+        <ul>
             <li><a class="icon-link round facebook" href="#"></a></li>
             <li><a class="icon-link round p" href="#"></a></li>
             <li><a class="icon-link round twitter" href="#"></a></li>
