@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SendMailRequest;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -85,5 +86,9 @@ class IndexController extends Controller
     public function mail()
     {
         return view('pages.mail.index');
+    }
+    public function send_mail(SendMailRequest $request)
+    {
+        dd('Hello');
     }
 }

@@ -29,11 +29,12 @@
             </div>
             <div class="col-md-8 contact-left wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <h4>Contact Form</h4>
-                <form>
-                    <input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-                    <input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-                    <input type="text" value="Telephone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
-                    <textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+                <form action="{{ route('send_mail') }}" method="POST">
+                    @csrf
+                    <input type="text" value="Name" name="name" required="">
+                    <input type="email" value="Email" name="email" required="">
+                    <input type="text" value="Telephone" name="phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
+                    <textarea type="text" name="message" required="">Message...</textarea>
                     <input type="submit" value="Submit" >
                     <input type="reset" value="Clear" >
 
