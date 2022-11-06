@@ -14,7 +14,11 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::query();
+        $events = $events->whereIn('text', 'LIKE', '%' .'4'.'%')
+            ->take(3)
+            ->get();
+        return view('pages.events.index', compact('events'));
     }
 
     /**

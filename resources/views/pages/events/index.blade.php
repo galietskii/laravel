@@ -16,12 +16,12 @@
             <div class="event-grids">
                 @foreach($events as $event)
                     <div class="col-md-4 event-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-                        <p class="dte">{{ $event['date'] }}</p>
-                        <img src="{{ asset($event['img']) }}" alt=" " class="img-responsive" />
+                        <p class="dte">{{ $event->date }}</p>
+                        <img src="{{ asset($event->img) }}" alt=" " class="img-responsive" />
                         <div class="nobis">
-                            <a href="single.html">{!! $event['link'] !!}</a>
+                            <a href="single.html">{!! $event->link !!}</a>
                         </div>
-                        {!! $event['text'] !!}
+                        {!! $event->text !!}
                         <div class="more">
                             <a href="{{url('shownews/'.'$event->id')}}" class="hvr-curl-bottom-right">Read More</a>
                         </div>
