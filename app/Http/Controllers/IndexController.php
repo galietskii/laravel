@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SendMailRequest;
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -89,6 +90,10 @@ class IndexController extends Controller
     }
     public function send_mail(SendMailRequest $request)
     {
-        dd('Hello');
+        $message = new Message;
+        $message->fill($request->all());
+        $message->save();
+        dd($message);
+        return redirect()->route('')->with('success', 'its ok');
     }
 }

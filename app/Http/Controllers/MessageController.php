@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
+use App\Models\Message;
 use Illuminate\Http\Request;
 
-class EventController extends Controller
+class MessageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,13 +13,8 @@ class EventController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {        $events = Event::query();
-        $events = $events//->whereIn('text', 'LIKE', '%' .'4'.'%')
-            ->orderByDesc('date')
-            ->take(3)
-            ->get();
-        return view('pages.events.index', compact('events'));
-
+    {
+        //
     }
 
     /**
@@ -46,10 +41,10 @@ class EventController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show(Message $message)
     {
         //
     }
@@ -57,10 +52,10 @@ class EventController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function edit(Event $event)
+    public function edit(Message $message)
     {
         //
     }
@@ -69,10 +64,10 @@ class EventController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Event $event)
+    public function update(Request $request, Message $message)
     {
         //
     }
@@ -80,10 +75,10 @@ class EventController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Event $event)
+    public function destroy(Message $message)
     {
         //
     }
