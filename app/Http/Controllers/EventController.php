@@ -7,19 +7,23 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
+    public function __construct()
+    {
+
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {        $events = Event::query();
-        $events = $events//->whereIn('text', 'LIKE', '%' .'4'.'%')
-            ->orderByDesc('date')
-            ->take(3)
+    {
+        $events = Event::query();
+        $events = $events->orderByDesc('date')
+            ->select('id','date','img','link','text')
             ->get();
-        return view('pages.events.index', compact('events'));
 
+        return view('pages.events.index',compact('events'));
     }
 
     /**
@@ -51,7 +55,8 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        $event = Event::where('id',$id)->first();
+        dd($event);
     }
 
     /**
@@ -87,4 +92,5 @@ class EventController extends Controller
     {
         //
     }
+
 }

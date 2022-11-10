@@ -19,11 +19,11 @@
                         <p class="dte">{{ $event->date }}</p>
                         <img src="{{ asset($event->img) }}" alt=" " class="img-responsive" />
                         <div class="nobis">
-                            <a href="single.html">{!! $event->link !!}</a>
+                            <a href="{{ route('events.show',$event) }}">{!! $event->link !!}</a>
                         </div>
-                        {!! $event->text !!}
+                        {!! Str::words($event->text . $event->text .$event->text .$event->text, 20, '>>>') !!}
                         <div class="more">
-                            <a href="{{url('shownews/'.'$event->id')}}" class="hvr-curl-bottom-right">Read More</a>
+                            <a href="{{ route('events.show',$event) }}" class="hvr-curl-bottom-right">Read More</a>
                         </div>
                     </div>
                 @endforeach

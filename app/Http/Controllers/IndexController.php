@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\SendMailRequest;
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class IndexController extends Controller
 {
@@ -81,6 +82,7 @@ class IndexController extends Controller
             <div class="clearfix"> </div>
         </div>']
         ];
+
         return view('pages.home.index',compact('banners','banner_bottoms'));
     }
 
@@ -88,12 +90,13 @@ class IndexController extends Controller
     {
         return view('pages.mail.index');
     }
+
     public function send_mail(SendMailRequest $request)
     {
-        $message = new Message;
-        $message->fill($request->all());
-        $message->save();
-        dd($message);
-        return redirect()->route('')->with('success', 'its ok');
+        $massage = new Message;
+        $massage->fill($request->all());
+        $massage->save();
+
+        return back()->with('success','its ok');
     }
 }

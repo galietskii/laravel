@@ -18,7 +18,9 @@
         </nav>
     </div>
 </div>
-
+ERROR
+@include('pages._layouts.messages')
+END_ERROR
 @yield('content')
 
 @include('pages._layouts.footer')

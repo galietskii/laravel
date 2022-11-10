@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('events', function (Blueprint $table) {
-            $table->id();
-            $table->string('date')->index()->nullable()->default('2 January 2016')->comment('date');
-            $table->string('img')->nullable()->default('images/10.jpg')->comment('image');
-            $table->string('link')->nullable()->comment('link');
-            $table->text('text')->nullable()->comment('text');
-            $table->timestamps();
+        Schema::table('events', function (Blueprint $table) {
+            $table->string('title')->index()->nullable()->comment('title')->after('img');
         });
     }
 

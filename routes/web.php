@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\IndexAdminController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ServicesController;
@@ -16,8 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/',[IndexController::class, 'home'])->name('home');
 Route::get('/mail',[IndexController::class, 'mail'])->name('mail');
 Route::post('/send_mail',[IndexController::class, 'send_mail'])->name('send_mail');
 Route::resource('events',EventController::class);
-Route::resource('services', ServicesController::class);
+Route::get('/services',[ServicesController::class, 'services'])->name('services');
+require('_admin.php');
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

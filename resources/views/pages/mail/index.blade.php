@@ -31,10 +31,10 @@
                 <h4>Contact Form</h4>
                 <form action="{{ route('send_mail') }}" method="POST">
                     @csrf
-                    <input type="text" value="Name" name="name" required="">
+                    <input type="text" value="Name" name="name" ><!-- onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" -->
                     <input type="email" value="Email" name="email" required="">
-                    <input type="text" value="Telephone" name="phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
-                    <textarea type="text" name="message" required="">Message...</textarea>
+                    <input type="text" value="Telephone" name="phone" required="">
+                    <textarea type="text" name="massage" required="">Message...</textarea>
                     <input type="submit" value="Submit" >
                     <input type="reset" value="Clear" >
 

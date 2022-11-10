@@ -22,7 +22,7 @@
     </div>
     <!-- //newsletter -->
     <!-- newsletter-bottom -->
-    <div class="newsletter-bottom">
+    <div class="newsletter-bottom">{{ debug(123) }}
         <div class="container">
             <div class="newsletter-bottom-grids">
                 <div class="col-md-6 newsletter-bottom-grid wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">

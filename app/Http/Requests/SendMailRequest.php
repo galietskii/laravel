@@ -27,7 +27,26 @@ class SendMailRequest extends FormRequest
             'name' => 'string|required|max:191',
             'email' => 'email|required|max:191',
             'phone' => 'string|required|max:191',
-            'message' => 'string|nullable|max:2500',
+            'massage' => 'string|nullable|max:2500',
+        ];
+    }
+
+    public function attributes() // обозначение переменных
+    {
+        return [
+            'name' => 'Поле "Name"',
+            'email' => 'Поле "Email"',
+            'phone' => 'Поле "Telephone"',
+            'massage' => 'Поле "Message"',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            '*.required' => 'Не введёно :attribute',
+            '*.max' => 'Превышена допустимая длина поля \":attribute\"',
+            '*.email' => 'Должна быть указана електронная почта',
         ];
     }
 }
